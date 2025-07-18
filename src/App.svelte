@@ -9,14 +9,18 @@
   import IntersectionObserverSectionCard from "./sections/IntersectionObserverSectionCard.svelte";
   import IntersectionObserverListExample from "./sections/IntersectionObserverListExample.svelte";
   import HomeOwnershipRateChart from "./sections/HomeownershipRateChangeChart.svelte";
+  import SviChart from "./sections/SVIChart.svelte";
+  import YearGapInteractive from "./sections/YearGapInteractive.svelte";
 </script>
 
 <main>
   <TitleSection />
 
   <HomeOwnershipRateChart />
+  <YearGapInteractive />
 
   <RightAlignedExample />
+  <SviChart />
   <LeftAlignedExample />
   <ImageExample />
 

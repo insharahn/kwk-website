@@ -18,14 +18,12 @@
     const nationalRaw = await d3.csv(
       "/kwk-scrollytelling-template/data/homeownership_16_to_23_caseshiller.csv"
     );
-
-    console.log("Loaded national rate data:", nationalRaw);
+    console.log("Loaded national rate data:", nationalRaw); //for debugging
 
     const blackRaw = await d3.csv(
       "/kwk-scrollytelling-template/data/black_homeownership_16_to_23_caseshiller.csv"
     );
-
-    console.log("Loaded black rate data:", blackRaw);
+    console.log("Loaded black rate data:", blackRaw); //for debugging
 
     //parse the date and number
     const parseDate = d3.timeParse("%m/%d/%Y");
@@ -49,14 +47,14 @@
     console.log("Parsed national:", national);
     console.log("Parsed black:", black);
 
-    //timestamp (milliseconds) and value for highcarts series
+    //timestamp and value for highcarts series
     const nationalSeries = national.map((d) => [d.date.getTime(), d.value]);
     const blackSeries = black.map((d) => [d.date.getTime(), d.value]);
 
     //plot!
     options = {
       chart: { type: "spline" },
-      title: { text: "Black vs National Homeownership Rate (2016–2023)" },
+      title: { text: "Black vs. National Homeownership Rate (2016–2023)" },
       subtitle: { text: "Click legend items to hide/show series" },
       accessibility: {
         //add accessibility
@@ -80,7 +78,7 @@
       tooltip: {
         shared: true,
         valueSuffix: "%",
-        xDateFormat: "%b %Y", //appreviation month and year
+        xDateFormat: "%b %Y", //appreviation month and year like Jun 2025
       },
       plotOptions: {
         series: {
@@ -95,12 +93,12 @@
         {
           name: "National Average",
           data: nationalSeries,
-          color: "#1f77b4",
+          color: "#1f77b4", //blue
         },
         {
           name: "Black Homeownership",
           data: blackSeries,
-          color: "#d62728",
+          color: "#d62728", //red
         },
       ],
       credits: { enabled: false },
