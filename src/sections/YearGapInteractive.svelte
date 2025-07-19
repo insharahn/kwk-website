@@ -1,5 +1,4 @@
-<!--interactive component for year wise different-->
-<!-- Interactive component for year-wise difference -->
+<!--interactive component for year wise differennce-->
 <script>
   import { onMount } from "svelte";
   import * as d3 from "d3";
@@ -75,8 +74,12 @@
   >
     <h3 id="year-gap-heading">Explore homeownership gap by year</h3>
     <p id="year-gap-desc">
-      Use the slider to pick a year and see the Black homeownership rate,
-      national rate, and the gap between them.
+      Use the slider to pick a year and see the <a
+        href="https://fred.stlouisfed.org/series/BOAAAHORUSQ156N"
+        >Black homeownership rate</a
+      >,
+      <a href="https://fred.stlouisfed.org/series/RHORUSQ156N">national rate</a
+      >, and the gap between them.
     </p>
 
     <label for="year-slider"> Pick a year: </label>

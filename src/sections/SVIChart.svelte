@@ -1,5 +1,3 @@
-<!--this chart depicts the svi against the county-wise black population percentage
-    source: https://blackwealthdata.org/explore/homeownership#HOM-05 -->
 <script>
   import * as Highcharts from "highcharts";
   import Accessibility from "highcharts/modules/accessibility";
@@ -17,7 +15,7 @@
     );
     console.log("Loaded raw data:", rawData);
 
-    //parse into scatterplot data points (svi, percentage)
+    //paerse data and seperate into scatterplot data points (svi, percentage)
     const dataPoints = rawData.map((d) => ({
       x: +d.rpl_themes,
       y: +d.pct_owner_occupied_black_alone,
@@ -27,20 +25,35 @@
 
     console.log("Parsed data points:", dataPoints);
 
+    //colorblind-friendly color scale (Turbo from ColorBrewer)
+    const colorScale = d3
+      .scaleSequential(d3.interpolateTurbo)
+      .domain([0, d3.max(dataPoints, (d) => d.blackPct)]); //map to black population percentage
+
+    //add color to each data point
+    const coloredDataPoints = dataPoints.map((d) => ({
+      ...d,
+      color: colorScale(d.blackPct),
+      marker: {
+        fillOpacity: 0.7, //slightly translucent for better overlap visibility
+      },
+    }));
+
     options = {
       chart: { type: "scatter", zoomType: "xy" },
       title: { text: "Black Homeownership vs SVI by County (2023)" },
-      subtitle: { text: "Each dot = one county; hover to see details" },
+      subtitle: {
+        text: "Each dot = one county; hover to see details; color indicates % Black Population",
+      },
       accessibility: {
         enabled: true,
         description:
-          "This scatterplot shows each U.S. county as a diamond-shaped dot. The x-axis shows the Social Vulnerability Index (SVI) from 0 to 1. The y-axis shows the percentage of Black owner-occupied homes in that county in 2023. Users can hover or focus each dot to hear the county name, SVI, and homeownership percentage.",
+          "This scatterplot shows each U.S. county as a diamond-shaped dot. The x-axis shows the Social Vulnerability Index (SVI) from 0 to 1. The y-axis shows the percentage of Black owner-occupied homes in that county in 2023. Dot color represents the percentage of Black population, with a gradient from dark blue (low) to yellow (high). Users can hover or focus each dot to hear the county name, SVI, homeownership percentage, and Black population percentage.",
         landmarkVerbosity: "one",
         keyboardNavigation: {
           enabled: true,
         },
       },
-
       xAxis: {
         title: { text: "Social Vulnerability Index (SVI)" },
         min: 0,
@@ -55,11 +68,32 @@
         pointFormat:
           "<b>{point.name}</b><br/>SVI: {point.x:.2f}<br/>% Black Homeownership: {point.y}%<br/>% Black Population: {point.blackPct}%",
       },
+      legend: {
+        enabled: true,
+        title: { text: "% Black Population" },
+        layout: "vertical",
+        align: "right",
+        verticalAlign: "middle",
+        symbolHeight: 280,
+        labelFormatter: function () {
+          return null; //hide individual point labels in legend
+        },
+        useHTML: true,
+        squareSymbol: false,
+        symbolWidth: 20,
+        backgroundColor: "rgba(255, 255, 255, 0.8)",
+      },
       series: [
         {
           name: "County",
-          color: "#1f77b4",
-          data: dataPoints,
+          data: coloredDataPoints,
+          color: {
+            linearGradient: { x1: 0, x2: 0, y1: 0, y2: 1 },
+            stops: [
+              [0, d3.interpolateTurbo(0)],
+              [1, d3.interpolateTurbo(1)],
+            ],
+          },
         },
       ],
       plotOptions: {
@@ -67,7 +101,6 @@
           marker: {
             radius: 6,
             symbol: "diamond",
-            fillOpacity: 0.6, //makes points slightly translucent
           },
           states: {
             hover: { enabled: true, lineWidth: 1 },
@@ -75,15 +108,18 @@
           accessibility: {
             point: {
               valueDescriptionFormat:
-                "{index}. {point.name}. SVI: {point.x:.2f}. % Black Homeownership: {point.y}%.",
+                "{index}. {point.name}. SVI: {point.x:.2f}. % Black Homeownership: {point.y}%. % Black Population: {point.blackPct}%.",
             },
           },
         },
         series: {
           descriptionFormatter: function (series) {
-            return series.name + ", scatterplot series of counties.";
+            return (
+              series.name +
+              ", scatterplot series of counties with color indicating Black population percentage."
+            );
           },
-          pointDescriptionEnabledThreshold: 50, // avoids overwhelming with too many points
+          pointDescriptionEnabledThreshold: 50,
         },
       },
       credits: { enabled: false },
@@ -99,7 +135,8 @@
   {/if}
   <figcaption>
     Scatterplot of Black owner-occupied home percentage vs Social Vulnerability
-    Index (SVI) by county in 2023. Source: <a
+    Index (SVI) by county in 2023. You can interact with the plot. Dot color
+    indicates % Black Population (dark blue = low, yellow = high). Source: <a
       href="https://blackwealthdata.org/explore/homeownership#HOM-05"
       >BWDC Homeownership Dataset</a
     >

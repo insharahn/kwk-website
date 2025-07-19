@@ -11,11 +11,12 @@
   import HomeOwnershipRateChart from "./sections/HomeownershipRateChangeChart.svelte";
   import SviChart from "./sections/SVIChart.svelte";
   import YearGapInteractive from "./sections/YearGapInteractive.svelte";
+  import CountyMedianInteractive from "./sections/CountyMedianInteractive.svelte";
 </script>
 
 <main>
   <TitleSection />
-
+  <CountyMedianInteractive />
   <HomeOwnershipRateChart />
   <YearGapInteractive />
 

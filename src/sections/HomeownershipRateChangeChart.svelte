@@ -114,7 +114,7 @@
     <p>Loading chart...</p>
   {/if}
   <figcaption>
-    Black vs National Homeownership Rate from 2016–2023. Source: <a
+    Black vs National Homeownership Rate from 2016–2023. Sources: <a
       href="https://fred.stlouisfed.org/series/RHORUSQ156N"
       target="_blank"
       rel="noopener">FRED RHORUSQ156N</a

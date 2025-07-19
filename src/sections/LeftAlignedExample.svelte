@@ -4,6 +4,7 @@
   import { Chart } from "@highcharts/svelte";
   import Scroller from "../lib/Scroller.svelte";
   import ArticleText from "../lib/ArticleText.svelte";
+  import CountyMedianInteractive from "./CountyMedianInteractive.svelte";
   import type { SeriesSplineOptions } from "highcharts";
 
   const series: SeriesSplineOptions[] = [
@@ -81,11 +82,12 @@
   <Scroller layout="left">
     {#snippet sticky()}
       <div class="chart">
-        <Chart bind:chart {options} highcharts={Highcharts} />
+        <!-- <Chart bind:chart {options} highcharts={Highcharts} /> -->
+        <CountyMedianInteractive />
       </div>
-      <button on:click={toggleThirdSeries} class="toggle-button">
+      <!-- <button on:click={toggleThirdSeries} class="toggle-button">
         {thirdSeriesVisible ? "Remove Group 3" : "Add Group 3"}
-      </button>
+      </button> -->
       <div>
         <p>
           You can use Svelte to add and remove data from a Highcharts chart.
