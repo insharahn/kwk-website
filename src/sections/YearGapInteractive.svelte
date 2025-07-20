@@ -110,19 +110,93 @@
 
 <style>
   .year-gap-mini {
-    font-size: 0.95rem;
-    color: #333;
-    margin: 1rem 0;
+    background-color: rgba(238, 102, 119, 0.8);
+    border: 3px dotted #ccbb44;
+    border-radius: 1rem;
+    color: #f7f5eb;
+    padding: 1rem;
+    text-align: center;
+    max-width: 400px;
+    margin: 1rem auto;
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      sans-serif;
   }
-  input[type="range"] {
-    width: 200px;
-    margin: 0 0.5rem;
-  }
-  .numbers p {
-    margin: 0.3rem 0;
-  }
+
   h3 {
     margin: 0 0 0.5rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    color: #ccbb44;
+  }
+
+  p {
+    margin: 0.3rem 0;
+  }
+
+  a {
+    color: #ccbb44;
+    text-decoration: underline;
+  }
+
+  a:hover {
+    color: #4477aa;
+  }
+
+  label {
+    display: block;
+    margin: 0.5rem 0 0.3rem;
+    font-weight: 500;
+  }
+
+  input[type="range"] {
+    width: 100%;
+    max-width: 250px;
+    appearance: none;
+    background: #aa3377;
+    height: 6px;
+    border-radius: 3px;
+    outline: none;
+    margin: 0.5rem 0;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #ccbb44;
+    border: 2px solid #4477aa;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #ccbb44;
+    border: 2px solid #4477aa;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  output {
+    display: block;
+    margin-top: 0.3rem;
+    font-weight: bold;
+    color: #f7f5eb;
+  }
+
+  .numbers {
+    margin-top: 0.5rem;
+  }
+
+  .numbers p strong {
+    color: #ccbb44;
   }
 </style>

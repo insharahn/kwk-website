@@ -1,34 +1,53 @@
 <script>
-  //changing the props to add aria labels
   export let layout;
   export let sticky;
   export let scrolly;
-  export let ariaLabelledby;
+  export let ariaLabelledby; //new
+  export let bg; //new for easy bg control
 </script>
 
-<div class="wrapper {layout}" aria-labelledby={ariaLabelledby}>
-  <!--added aria labels-->
+<div class="wrapper {layout} {bg}" aria-labelledby={ariaLabelledby}>
   <div class="sticky">
     {@render sticky()}
   </div>
-
   <div class="scrolly">
     {@render scrolly()}
   </div>
 </div>
 
 <style>
+  /*theme colors as variables: Paul Tol's Bright*/
+  :root {
+    --pink: #ee6677;
+    --purple: #aa3377;
+    --yellow: #ccbb44;
+    --offwhite: #f7f5eb;
+    --bright-blue: #4096fa;
+  }
+
+  /* wrapper: flexible container with nice border */
   .wrapper {
-    background-color: #f7f5eb;
     padding: min(100vh, 30rem) 1rem;
-    border-style: solid;
-    border-color: #4096fa;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
+    background-color: var(--offwhite); /* fallback if no bg class */
+    transition: background-color 0.3s ease;
   }
 
+  /* bg color classes can pass as bg prop */
+  .bg-pink {
+    background-color: var(--pink);
+  }
+  .bg-purple {
+    background-color: var(--purple);
+  }
+  .bg-yellow {
+    background-color: var(--yellow);
+  }
+
+  /* Layout control: left/right */
   .left .scrolly {
     order: 0;
   }
@@ -43,18 +62,18 @@
     order: 0;
   }
 
+  /* Sticky & scrolly columns */
   .sticky,
   .scrolly {
     display: flex;
     flex-direction: column;
-    flex: 1 1; /* Allows growing, shrinking */
+    flex: 1 1;
   }
 
   .sticky {
     position: sticky;
     top: 50vh;
     transform: translateY(-50%);
-    display: flex;
     align-items: center;
     justify-content: center;
     z-index: 0;
@@ -64,6 +83,7 @@
     z-index: 1;
   }
 
+  /* Mobile: stack vertically, remove sticky */
   @media (max-width: 768px) {
     .wrapper {
       flex-direction: column;
@@ -75,7 +95,7 @@
     .scrolly {
       flex: 1 1 auto;
       min-width: 100%;
-      position: static; /* remove sticky on mobile */
+      position: static;
       transform: none;
     }
 

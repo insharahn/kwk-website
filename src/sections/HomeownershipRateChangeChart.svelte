@@ -113,7 +113,9 @@
 <figure>
   <!--wrapped in figure tag for screen readers-->
   {#if options}
-    <Chart {options} highcharts={Highcharts} />
+    <div class="chart-wrapper">
+      <Chart {options} highcharts={Highcharts} />
+    </div>
   {:else}
     <p>Loading chart...</p>
   {/if}
@@ -133,14 +135,41 @@
 </figure>
 
 <style>
+  figure {
+    background-color: rgba(238, 102, 119, 0.8);
+    border: 3px dotted #ccbb44;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    text-align: center;
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      sans-serif;
+  }
+
   figcaption {
     font-size: 0.85rem;
-    color: #555;
+    color: #f7f5eb;
     margin-top: 0.5rem;
   }
 
   figcaption a {
-    color: purple;
+    color: #ccbb44;
     text-decoration: underline;
+  }
+
+  figcaption a:hover {
+    color: #4477aa;
+  }
+  .chart-wrapper {
+    overflow-x: auto;
   }
 </style>

@@ -7,7 +7,7 @@
 </script>
 
 <!--center-aligned text -->
-<CenterScroller ariaLabelledby="reflection-heading">
+<CenterScroller bg="bg-purple" ariaLabelledby="reflection-heading">
   {#snippet sticky()}
     <!-- hidden heading for accessibility -->
     <h2 id="reflection-heading" class="visually-hidden">

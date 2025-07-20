@@ -41,7 +41,7 @@
         Skyline houses vector
       </a>,
       <a
-        href="https://png.pngtree.com/png-clipart/20230927/original/pngtree-house-with-no-background-png-image_13001602.png"
+        href="https://thumbnail.imgbin.com/5/17/20/house-logo-cartoon-house-in-pastel-color-design-ZPXfLUzP_t.jpg"
         target="_blank"
         rel="noopener"
       >

@@ -1,4 +1,3 @@
-<!--add accessibility-->
 <script>
   import { fade, fly } from "svelte/transition";
   import Scroller from "../lib/Scroller.svelte";
@@ -54,7 +53,7 @@
   };
 </script>
 
-<Scroller layout="left" ariaLabelledby="home-value-gap-heading">
+<Scroller layout="left" bg="bg-purple" ariaLabelledby="home-value-gap-heading">
   {#snippet sticky()}
     <aside
       class="visual-side"
@@ -63,10 +62,7 @@
     >
       {#if showHouseImage}
         <figure in:fade>
-          <img
-            src="public/house.png"
-            alt="Illustration of a single family home"
-          />
+          <img src="public/house.png" alt="Single family lego home" />
           <figcaption class="sr-only">
             A symbolic image representing homeownership
           </figcaption>
@@ -156,33 +152,45 @@
   .medians {
     margin-top: 1rem;
     text-align: center;
+    background-color: rgba(238, 102, 119, 0.8);
+    border: 3px dotted #ccbb44;
+    border-radius: 1rem;
+    padding: 1rem;
   }
 
   dl {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 0.5rem 1rem;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
   }
 
   .label {
-    font-size: 0.9rem;
-    color: #555;
+    font-size: 1rem;
+    color: #f7f5eb;
   }
 
   .number {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #1f77b4;
-    margin-bottom: 0.5rem;
+    color: #ccbb44;
+    margin-left: 0px;
   }
 
   .source {
     font-size: 0.7rem;
+    margin-left: 0px;
   }
 
   a {
-    color: purple;
+    color: #ccbb44;
+    text-decoration: underline;
+    transition: color 0.2s;
+  }
+
+  a:hover {
+    color: #4477aa;
   }
 
   .sr-only {

@@ -3,7 +3,7 @@
 
   const title = "Generational Gains";
   const subtitle =
-    "Exploring how home equity has failed to build—intergenerational wealth in Black families.";
+    "Exploring the relationship between home equity and intergenerational wealth in Black families.";
 </script>
 
 <TitleCard {title} {subtitle} />

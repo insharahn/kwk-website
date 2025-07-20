@@ -132,18 +132,10 @@
 {/if}
 
 <style>
-  figcaption {
-    font-size: 0.85rem;
-    color: #555;
-    margin-top: 0.75rem;
-  }
-
-  figcaption a {
-    color: purple;
-    text-decoration: underline;
-  }
-
   .county-lookup {
+    background-color: rgba(238, 102, 119, 0.8);
+    border: 3px dotted #ccbb44;
+    border-radius: 1rem;
     font-family:
       system-ui,
       -apple-system,
@@ -155,49 +147,45 @@
       Cantarell,
       sans-serif;
     font-size: 0.95rem;
-    color: #333;
-    margin: 1rem auto;
-    max-width: 500px;
+    color: #f7f5eb;
     padding: 1.5rem;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: left;
   }
 
   h3 {
     font-size: 1.2rem;
-    margin: 0 0 0.5rem;
-    color: #2c5282;
+    margin-bottom: 0.5rem;
+    color: #f7f5eb;
   }
 
   p#lookup-desc {
     font-size: 0.9rem;
-    color: #4a5568;
-    margin: 0 0 1rem;
+    margin-bottom: 1rem;
   }
 
   .input-group {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    align-items: flex-start;
+    align-items: stretch;
   }
 
   input[type="text"] {
-    width: 100%;
-    max-width: 300px;
+    width: 80%;
     padding: 0.75rem;
     font-size: 0.95rem;
-    border: 1px solid #e2e8f0;
-    border-radius: 6px;
-    background: #f7fafc;
-    transition: border-color 0.2s;
+    border: 2px solid #ccbb44;
+    border-radius: 0.5rem;
+    background: #fffaf2;
+    color: #333;
   }
 
   input[type="text"]:focus {
     outline: none;
-    border-color: #2c5282;
-    box-shadow: 0 0 0 3px rgba(44, 82, 130, 0.1);
+    border-color: #4477aa;
+    box-shadow: 0 0 0 3px rgba(68, 119, 170, 0.3);
   }
 
   .buttons {
@@ -206,57 +194,76 @@
   }
 
   button {
-    padding: 0.75rem 1rem;
+    padding: 0.6rem 1rem;
     font-size: 0.9rem;
     font-weight: 500;
-    color: #ffffff;
-    background: #2c5282;
+    color: #f7f5eb;
+    background: #4477aa;
     border: none;
-    border-radius: 6px;
+    border-radius: 0.5rem;
     cursor: pointer;
     transition: background 0.2s;
   }
 
   button:hover {
-    background: #2a4365;
+    background: #335a88;
   }
 
   button:nth-child(2) {
-    background: #718096;
+    background: #ccbb44;
+    color: #333;
   }
 
   button:nth-child(2):hover {
-    background: #5a6b82;
+    background: #b7a631;
   }
 
   .result {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     padding: 1rem;
-    background: #edf2f7;
-    border-radius: 6px;
+    background: rgba(255, 250, 242, 0.9);
+    border-radius: 0.75rem;
+    color: #333;
   }
 
   .result h4 {
+    margin-top: 0;
     font-size: 1rem;
     font-weight: 600;
-    color: #2c5282;
-    margin: 0 0 0.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .result p {
     margin: 0.3rem 0;
     font-size: 0.9rem;
-    color: #4a5568;
   }
 
   .result p strong {
-    color: #2d3748;
+    color: #aa3377;
   }
 
   .error {
-    color: #c53030;
+    color: #ffdddd;
+    background: #aa3377;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
     font-size: 0.9rem;
     margin: 0.5rem 0;
+  }
+
+  figcaption {
+    font-size: 0.85rem;
+    color: #f7f5eb;
+    margin-top: 0.75rem;
+  }
+
+  figcaption a {
+    color: #ccbb44;
+    text-decoration: underline;
+  }
+
+  figcaption a:hover {
+    color: #4477aa;
   }
 
   .visually-hidden {
