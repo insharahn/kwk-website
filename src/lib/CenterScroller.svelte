@@ -26,6 +26,12 @@
   }
 
   .center-wrapper {
+    background-image: url("/public/homes.png");
+    background-repeat: repeat-y;
+    background-position: bottom;
+    background-size: auto 100px;
+    background-size: contain;
+
     display: flex;
     flex-direction: column;
     align-items: center;
