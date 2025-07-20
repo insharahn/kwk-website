@@ -63,7 +63,7 @@
       {#if showHouseImage}
         <figure in:fade>
           <img
-            src={import.meta.env.BASE_URL + "public/house.png"}
+            src={import.meta.env.BASE_URL + "house.png"}
             alt="Single family lego home"
           />
           <figcaption class="sr-only">

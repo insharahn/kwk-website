@@ -20,12 +20,12 @@
 
     //load data from both CSVs
     const nationalRaw = await d3.csv(
-      import.meta.env.BASE_URL + "public/data/homeownership_16_to_23_caseshiller.csv"
+      import.meta.env.BASE_URL + "data/homeownership_16_to_23_caseshiller.csv"
     );
     console.log("Loaded national rate data:", nationalRaw); //for debugging
 
     const blackRaw = await d3.csv(
-      import.meta.env.BASE_URL + "public/data/black_homeownership_16_to_23_caseshiller.csv"
+      import.meta.env.BASE_URL + "data/black_homeownership_16_to_23_caseshiller.csv"
     );
     console.log("Loaded black rate data:", blackRaw); //for debugging
 
