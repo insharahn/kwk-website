@@ -13,7 +13,9 @@
   onMount(async () => {
     console.log("Loading scatterplot data...");
 
-    const rawData = await d3.csv(import.meta.env.BASE_URL + "public/data/svi_by_county.csv");
+    const rawData = await d3.csv(
+      import.meta.env.BASE_URL + "data/svi_by_county.csv"
+    );
     console.log("Loaded raw data:", rawData);
 
     //paerse data and seperate into scatterplot data points (svi, percentage)

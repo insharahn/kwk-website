@@ -4,7 +4,7 @@
 
 <div class="title-card">
   <img
-    src={import.meta.env.BASE_URL + "public/homes.png"}
+    src={import.meta.env.BASE_URL + "homes.png"}
     alt="Silhouette of a row of houses forming a neighborhood skyline against a purple background"
     class="background-image"
   />
