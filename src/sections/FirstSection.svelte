@@ -17,7 +17,9 @@
 
   //onMount: load & calculate 2023 black median
   onMount(async () => {
-    const raw = await d3.csv("public/data/black_median_home_value.csv");
+    const raw = await d3.csv(
+      import.meta.env.BASE_URL + "data/black_median_home_value.csv"
+    );
     const values2023 = raw
       .filter((d) => d.year === "2023")
       .map((d) => +d.median_home_value_owner_occupied_houses_with_mortages)
