@@ -1,9 +1,12 @@
-<script>
+<script lang="ts">
   import * as Highcharts from "highcharts";
   import Accessibility from "highcharts/modules/accessibility";
   import { Chart } from "@highcharts/svelte";
   import { onMount } from "svelte";
   import * as d3 from "d3";
+
+  //prop for fourth section
+  export let highlightPattern: boolean = false;
 
   let options = null;
 

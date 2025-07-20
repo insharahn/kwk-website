@@ -1,33 +1,19 @@
 <script>
-  import LeftAlignedExample from "./sections/LeftAlignedExample.svelte";
-  import RightAlignedExample from "./sections/RightAlignedExample.svelte";
-  import ImageExample from "./sections/ImageExample.svelte";
   import TitleSection from "./sections/TitleSection.svelte";
-  import InteresectionObserverBasicExample from "./sections/InteresectionObserverBasicExample.svelte";
-  import IntersectionObserverAlertExample from "./sections/IntersectionObserverAlertExample.svelte";
-  import DisappearingDuckExample from "./sections/DisappearingDuckExample.svelte";
-  import IntersectionObserverSectionCard from "./sections/IntersectionObserverSectionCard.svelte";
-  import IntersectionObserverListExample from "./sections/IntersectionObserverListExample.svelte";
-  import HomeOwnershipRateChart from "./sections/HomeownershipRateChangeChart.svelte";
-  import SviChart from "./sections/SVIChart.svelte";
-  import YearGapInteractive from "./sections/YearGapInteractive.svelte";
-  import CountyMedianInteractive from "./sections/CountyMedianInteractive.svelte";
+  import FirstSection from "./sections/FirstSection.svelte";
+  import SecondSection from "./sections/SecondSection.svelte";
+  import ThirdSection from "./sections/ThirdSection.svelte";
+  import FourthSection from "./sections/FourthSection.svelte";
+  import FifthSection from "./sections/FifthSection.svelte";
+  import Footer from "./sections/Footer.svelte";
 </script>
 
 <main>
   <TitleSection />
-  <CountyMedianInteractive />
-  <HomeOwnershipRateChart />
-  <YearGapInteractive />
-
-  <RightAlignedExample />
-  <SviChart />
-  <LeftAlignedExample />
-  <ImageExample />
-
-  <IntersectionObserverSectionCard />
-  <InteresectionObserverBasicExample />
-  <IntersectionObserverAlertExample />
-  <DisappearingDuckExample />
-  <IntersectionObserverListExample />
+  <FirstSection />
+  <SecondSection />
+  <ThirdSection />
+  <FourthSection />
+  <FifthSection />
+  <Footer />
 </main>

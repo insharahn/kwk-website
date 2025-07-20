@@ -2,12 +2,16 @@
      for america overall and the black population within
      data from https://fred.stlouisfed.org/series/RHORUSQ156N & https://fred.stlouisfed.org/series/BOAAAHORUSQ156N -->
 
-<script>
+<script lang="ts">
   import * as Highcharts from "highcharts";
   import Accessibility from "highcharts/modules/accessibility";
   import { Chart } from "@highcharts/svelte";
   import { onMount } from "svelte";
   import * as d3 from "d3";
+
+  //export props to allow parent to pass them in
+  export let highlight2016: boolean = false;
+  export let highlight2023: boolean = false;
 
   let options = null;
 

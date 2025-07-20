@@ -18,8 +18,8 @@
   .title-card {
     background-color: #aa3377; /* Paul Tol's Bright Purple */
     height: 100vh;
-    width: 100vw; /* Ensure full viewport width */
-    margin: 0; /* Remove any default margins */
+  /*  width: 100vw; /*full viewport width*/
+    margin: 0; /*remove any default margins*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,7 +37,7 @@
       Cantarell,
       sans-serif;
     position: relative;
-    overflow: hidden; /* Prevent image overflow */
+    overflow: hidden; /*prevent image overflow*/
   }
 
   .background-image {
@@ -46,10 +46,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Ensure entire image is visible */
-    object-position: bottom; /* Align to bottom for skyline effect */
+    object-fit: contain; /*ensure entire image is visible*/
+    object-position: bottom; /*align to bottom for skyline effect */
     z-index: 0;
-    opacity: 0.7; /* Subtle transparency for dramatic effect */
+    opacity: 0.7; /*subtle transparency for dramatic effect*/
   }
 
   .content {
@@ -65,20 +65,20 @@
     border-radius: 2rem;
     box-shadow: 16px 16px #4477aa; /* Paul Tol's Bright Blue for shadow */
     position: relative;
-    z-index: 1; /* Ensure content is above image */
+    z-index: 1; /*ensure content is above image*/
   }
 
   h1 {
     font-size: 3rem;
     margin: 0;
     color: #ccbb44; /* Paul Tol's Bright Yellow */
-    text-shadow: 1px 1px 0 #1a1a1a; /* Dark shadow for contrast */
+    text-shadow: 1px 1px 0 #1a1a1a;
     font-weight: 700;
   }
 
   p {
     font-size: 1.3rem;
-    color: #f7f5eb; /* Light off-white for readability */
+    color: #f7f5eb; /*light off-white for readability*/
     margin-top: 1rem;
     font-weight: 400;
   }

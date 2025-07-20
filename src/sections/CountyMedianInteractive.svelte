@@ -1,4 +1,5 @@
-<!-- this component allows users to look up the median and other details in their county -->
+<!-- this component allows users to look up the median and other details in their county 
+ source: https://blackwealthdata.org/explore/homeownership#HOM-06-->
 <script>
   import { onMount } from "svelte";
   import * as d3 from "d3";
@@ -68,10 +69,10 @@
 </script>
 
 {#if data.length}
-  <section
+  <figure
     class="county-lookup"
     aria-labelledby="lookup-heading"
-    aria-describedby="lookup-desc"
+    aria-describedby="lookup-desc source-note"
   >
     <h3 id="lookup-heading">Explore Black Median Home Values by County</h3>
     <p id="lookup-desc">
@@ -117,12 +118,31 @@
         </p>
       </div>
     {/if}
-  </section>
+
+    <figcaption id="source-note">
+      Source: <a
+        href="https://blackwealthdata.org/explore/homeownership#HOM-06"
+        target="_blank"
+        rel="noopener">Black Wealth Data Center</a
+      >
+    </figcaption>
+  </figure>
 {:else}
   <p>Loading data...</p>
 {/if}
 
 <style>
+  figcaption {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 0.75rem;
+  }
+
+  figcaption a {
+    color: purple;
+    text-decoration: underline;
+  }
+
   .county-lookup {
     font-family:
       system-ui,
@@ -165,7 +185,7 @@
 
   input[type="text"] {
     width: 100%;
-    max-width: 300px; /* Limit input width for better proportion */
+    max-width: 300px;
     padding: 0.75rem;
     font-size: 0.95rem;
     border: 1px solid #e2e8f0;

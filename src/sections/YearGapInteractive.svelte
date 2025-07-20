@@ -1,4 +1,4 @@
-<!--interactive component for year wise differennce-->
+<!--interactive slider component for year wise differennce-->
 <script>
   import { onMount } from "svelte";
   import * as d3 from "d3";
