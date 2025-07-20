@@ -39,7 +39,7 @@
       0.85
     ); /* Bright Pink with slight transparency */
     color: #f7f5eb; /* Off-white text for contrast */
-    border: 3px solid #ccbb44; /* Bright Yellow border */
+    border: 3px dashed #ccbb44; /* Bright Yellow border */
     border-radius: 20px;
     padding: 1.5rem;
     box-shadow: 12px 12px #4477aa; /* Bright Blue shadow */

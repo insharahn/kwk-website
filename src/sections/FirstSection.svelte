@@ -62,7 +62,10 @@
     >
       {#if showHouseImage}
         <figure in:fade>
-          <img src="public\house.png" alt="Single family lego home" />
+          <img
+            src={import.meta.env.BASE_URL + "public/house.png"}
+            alt="Single family lego home"
+          />
           <figcaption class="sr-only">
             A symbolic image representing homeownership
           </figcaption>

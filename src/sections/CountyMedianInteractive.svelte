@@ -10,7 +10,7 @@
   let error = null;
 
   onMount(async () => {
-    const raw = await d3.csv("public/data/black_median_home_value.csv");
+    const raw = await d3.csv(import.meta.env.BASE_URL + "public/data/black_median_home_value.csv");
     data = raw
       .filter(
         (d) =>

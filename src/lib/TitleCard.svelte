@@ -4,7 +4,7 @@
 
 <div class="title-card">
   <img
-<img src="{import.meta.env.BASE_URL + 'public/homes.png'}">
+    src={import.meta.env.BASE_URL + "public/homes.png"}
     alt="Silhouette of a row of houses forming a neighborhood skyline against a purple background"
     class="background-image"
   />
@@ -61,7 +61,7 @@
       0.8
     ); /* Paul Tol's Bright Pink with transparency */
     padding: 2rem;
-    border: 6px solid #ccbb44; /* Paul Tol's Bright Yellow */
+    border: 6px double #ccbb44; /* Paul Tol's Bright Yellow */
     border-radius: 2rem;
     box-shadow: 16px 16px #4477aa; /* Paul Tol's Bright Blue for shadow */
     position: relative;
