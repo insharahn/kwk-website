@@ -16,10 +16,10 @@
     const parseDate = d3.timeParse("%m/%d/%Y");
 
     const nationalRaw = await d3.csv(
-      "/kwk-scrollytelling-template/data/homeownership_16_to_23_caseshiller.csv"
+      "public/data/homeownership_16_to_23_caseshiller.csv"
     );
     const blackRaw = await d3.csv(
-      "/kwk-scrollytelling-template/data/black_homeownership_16_to_23_caseshiller.csv"
+      "public/data/black_homeownership_16_to_23_caseshiller.csv"
     );
 
     nationalData = nationalRaw

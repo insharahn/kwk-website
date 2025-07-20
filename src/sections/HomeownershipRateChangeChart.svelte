@@ -20,12 +20,12 @@
 
     //load data from both CSVs
     const nationalRaw = await d3.csv(
-      "/kwk-scrollytelling-template/data/homeownership_16_to_23_caseshiller.csv"
+      "public/data/homeownership_16_to_23_caseshiller.csv"
     );
     console.log("Loaded national rate data:", nationalRaw); //for debugging
 
     const blackRaw = await d3.csv(
-      "/kwk-scrollytelling-template/data/black_homeownership_16_to_23_caseshiller.csv"
+      "public/data/black_homeownership_16_to_23_caseshiller.csv"
     );
     console.log("Loaded black rate data:", blackRaw); //for debugging
 

@@ -17,9 +17,7 @@
 
   //onMount: load & calculate 2023 black median
   onMount(async () => {
-    const raw = await d3.csv(
-      "/kwk-scrollytelling-template/data/black_median_home_value.csv"
-    );
+    const raw = await d3.csv("public/data/black_median_home_value.csv");
     const values2023 = raw
       .filter((d) => d.year === "2023")
       .map((d) => +d.median_home_value_owner_occupied_houses_with_mortages)
@@ -62,7 +60,7 @@
     >
       {#if showHouseImage}
         <figure in:fade>
-          <img src="/public/homes.png" alt="Single family lego home" />
+          <img src="public\house.png" alt="Single family lego home" />
           <figcaption class="sr-only">
             A symbolic image representing homeownership
           </figcaption>

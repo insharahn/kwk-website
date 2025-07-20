@@ -10,9 +10,7 @@
   let error = null;
 
   onMount(async () => {
-    const raw = await d3.csv(
-      "/kwk-scrollytelling-template/data/black_median_home_value.csv"
-    );
+    const raw = await d3.csv("public/data/black_median_home_value.csv");
     data = raw
       .filter(
         (d) =>
