@@ -4,7 +4,7 @@
 
 <div class="title-card">
   <img
-    src="public\homes.png"
+    src="/public/homes.png"
     alt="Silhouette of a row of houses forming a neighborhood skyline against a purple background"
     class="background-image"
   />
@@ -18,7 +18,7 @@
   .title-card {
     background-color: #aa3377; /* Paul Tol's Bright Purple */
     height: 100vh;
-  /*  width: 100vw; /*full viewport width*/
+    /*  width: 100vw; /*full viewport width*/
     margin: 0; /*remove any default margins*/
     display: flex;
     justify-content: center;
