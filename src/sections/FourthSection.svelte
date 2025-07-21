@@ -25,7 +25,7 @@
   };
 </script>
 
-<Scroller layout="right" bg="bg-purple" ariaLabelledby="svi-chart-heading">
+<Scroller layout="right" bg="bg-gray" ariaLabelledby="svi-chart-heading">
   {#snippet sticky()}
     {#if showChart}
       <div

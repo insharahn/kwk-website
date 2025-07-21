@@ -23,6 +23,7 @@
     --yellow: #ccbb44;
     --offwhite: #f7f5eb;
     --bright-blue: #4096fa;
+    --gray: #bbbbbb;
   }
 
   .center-wrapper {
@@ -44,6 +45,8 @@
 
     transition: background-color 0.3s ease;
     text-align: center;
+
+    border-top: 7px dotted var(--yellow);
   }
 
   /* optional bg classes for colored background */
@@ -55,6 +58,9 @@
   }
   .bg-yellow {
     background-color: var(--yellow);
+  }
+  .bg-gray {
+    background-color: var(--gray);
   }
 
   .sticky {

@@ -23,6 +23,7 @@
     --yellow: #ccbb44;
     --offwhite: #f7f5eb;
     --bright-blue: #4096fa;
+    --gray: #bbbbbb;
   }
 
   /* wrapper: flexible container with nice border */
@@ -46,6 +47,9 @@
   .bg-yellow {
     background-color: var(--yellow);
   }
+  .bg-gray {
+    background-color: var(--gray);
+  }
 
   /* Layout control: left/right */
   .left .scrolly {
@@ -62,7 +66,6 @@
     order: 0;
   }
 
-  /* Sticky & scrolly columns */
   .sticky,
   .scrolly {
     display: flex;
@@ -83,7 +86,6 @@
     z-index: 1;
   }
 
-  /* Mobile: stack vertically, remove sticky */
   @media (max-width: 768px) {
     .wrapper {
       flex-direction: column;

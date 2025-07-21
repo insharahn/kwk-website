@@ -7,7 +7,7 @@
 </script>
 
 <!--center-aligned text -->
-<CenterScroller bg="bg-purple" ariaLabelledby="reflection-heading">
+<CenterScroller bg="bg-gray" ariaLabelledby="reflection-heading">
   {#snippet sticky()}
     <!-- hidden heading for accessibility -->
     <h2 id="reflection-heading" class="visually-hidden">
@@ -18,8 +18,8 @@
   {#snippet scrolly()}
     <ObservedArticleText callback={() => {}} {options}>
       <p in:fly={{ y: 20, duration: 600 }}>
-        Generational wealth isn’t just about saving—it’s about what your parents
-        and grandparents could buy, and what they could pass on.
+        Generational wealth isn’t just about saving; it’s about what your
+        parents and grandparents could buy, and what they could pass on.
       </p>
     </ObservedArticleText>
 

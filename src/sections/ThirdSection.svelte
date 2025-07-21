@@ -7,7 +7,7 @@
   const dummyCallback = () => {};
 </script>
 
-<Scroller layout="left"  bg="bg-purple" ariaLabelledby="county-median-heading">
+<Scroller layout="left"  bg="bg-gray" ariaLabelledby="county-median-heading">
   {#snippet scrolly()}
     <ObservedArticleText callback={dummyCallback} {options}>
       <p>

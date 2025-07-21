@@ -33,7 +33,7 @@
   };
 </script>
 
-<Scroller layout="right" bg="bg-purple" ariaLabelledby="ownership-gap-heading">
+<Scroller layout="right" bg="bg-gray" ariaLabelledby="ownership-gap-heading">
   {#snippet sticky()}
     <div
       class="chart-container {showChart ? 'visible' : ''}"

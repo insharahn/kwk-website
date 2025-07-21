@@ -151,7 +151,7 @@
 <style>
   figure {
     background-color: rgba(238, 102, 119, 0.8);
-    border: 3px dotted #ccbb44;
+    border: 5px dotted #ccbb44;
     border-radius: 1rem;
     padding: 1rem;
     margin: 2rem auto;

@@ -86,7 +86,7 @@
         id="county-search"
         type="text"
         bind:value={query}
-        placeholder="Enter county name, e.g., Cook County"
+        placeholder="e.g. Cook County"
         aria-label="County name"
         on:keypress={handleKeypress}
       />
@@ -134,7 +134,7 @@
 <style>
   .county-lookup {
     background-color: rgba(238, 102, 119, 0.8);
-    border: 3px dotted #ccbb44;
+    border: 5px dotted #ccbb44;
     border-radius: 1rem;
     font-family: var(--font-mono);
 
@@ -169,8 +169,7 @@
     padding: 0.75rem;
     font-size: 0.95rem;
     font-family: var(--font-mono);
-
-    border: 2px solid #ccbb44;
+    border: 4px double #ccbb44;
     border-radius: 0.5rem;
     background: #fffaf2;
     color: #333;

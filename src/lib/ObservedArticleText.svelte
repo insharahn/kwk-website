@@ -1,4 +1,5 @@
 <script>
+  
   import { onMount } from "svelte";
 
   let { children, callback, options } = $props();
@@ -42,7 +43,7 @@
     border: 3px dashed #ccbb44; /* brihg yellow border */
     border-radius: 20px;
     padding: 1.5rem;
-    box-shadow: 12px 12px #bbbbbb; /* gray shadow */
+    box-shadow: 12px 12px #aa3377; /* purple shadow */
     font-family: var(--font-sans);
     text-align: center;
   }

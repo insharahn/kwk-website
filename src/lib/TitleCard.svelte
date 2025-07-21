@@ -16,7 +16,7 @@
 
 <style>
   .title-card {
-    background-color: #aa3377; /* Paul Tol's Bright purple */
+    background-color: var(--purple);
     height: 100vh;
     /*  width: 100vw; /*full viewport width*/
     margin: 0; /*remove any default margins*/
@@ -30,7 +30,7 @@
     font-style: italic;
     position: relative;
     overflow: hidden; /*prevent image overflow*/
-    border-bottom: 5px dotted #ccbb44;
+    border-bottom: 5px dotted var(--yellow);
   }
 
   .background-image {
@@ -54,7 +54,7 @@
       0.8
     ); /* Paul Tol's Bright pink with transparency */
     padding: 2rem;
-    border: 6px dashed #ccbb44; /* Paul Tol's Bright yellow */
+    border: 6px dashed var(--yellow);
     border-radius: 2rem;
     /* box-shadow: 16px 16px #bbbbbb; /* Paul Tol's Bright gray */
     position: relative;

@@ -53,7 +53,7 @@
   };
 </script>
 
-<Scroller layout="left" bg="bg-purple" ariaLabelledby="home-value-gap-heading">
+<Scroller layout="left" bg="bg-gray" ariaLabelledby="home-value-gap-heading">
   {#snippet sticky()}
     <aside
       class="visual-side"
@@ -141,7 +141,6 @@
 </Scroller>
 
 <style>
-
   .visual-side {
     display: flex;
     flex-direction: column;
@@ -157,7 +156,7 @@
     margin-top: 1rem;
     text-align: center;
     background-color: rgba(238, 102, 119, 0.8);
-    border: 3px dotted #ccbb44;
+    border: 5px dotted var(--yellow);
     border-radius: 1rem;
     padding: 1rem;
     font-family: var(--font-mono);

@@ -112,7 +112,7 @@
 <style>
   .year-gap-mini {
     background-color: rgba(238, 102, 119, 0.8);
-    border: 3px dotted #ccbb44;
+    border: 5px dotted var(--yellow);
     border-radius: 1rem;
     color: #f7f5eb;
     padding: 1rem;
