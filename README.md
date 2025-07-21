@@ -5,6 +5,7 @@ I used <a href="https://github.com/jasminesamra/kwk-scrollytelling-template">thi
 
 ## Deployed Link
 Check the project out <a href="https://insharahn.github.io/kwk-website/">here!</a>
+For optimal viewing experience, please set your browser's zoom to 80% and only view it on a Desktop :P
 
 ## Accessibility Highlights
 
