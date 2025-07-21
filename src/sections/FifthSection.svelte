@@ -1,7 +1,7 @@
 <script>
   import { fly } from "svelte/transition";
   import CenterScroller from "../lib/CenterScroller.svelte";
-  import ObservedArticleText from "../lib/ObservedArticleText.svelte";
+  import ArticleText from "../lib/ArticleText.svelte";
 
   const options = { threshold: [0.8, 0.95] };
 </script>
@@ -16,15 +16,15 @@
   {/snippet}
 
   {#snippet scrolly()}
-    <ObservedArticleText callback={() => {}} {options}>
-      <p in:fly={{ y: 20, duration: 600 }}>
+    <ArticleText>
+      <p>
         Generational wealth isn’t just about saving; it’s about what your
         parents and grandparents could buy, and what they could pass on.
       </p>
-    </ObservedArticleText>
+    </ArticleText>
 
-    <ObservedArticleText callback={() => {}} {options}>
-      <p in:fly={{ y: 20, duration: 600 }}>
+    <ArticleText>
+      <p>
         The persistent gap in Black homeownership, underscored by lower rates
         (41.5% in 2016, still trailing the national average by 2023) and lower
         median home values in Black communities (e.g., $95,800 in Sumter County,
@@ -32,33 +32,39 @@
         wealth.
       </p>
       <p>
-        Systemic barriers like redlining, discriminatory lending, and limited
-        access to appreciating neighborhoods continue to limit Black families'
-        ability to build equity through homeownership, perpetuating a wealth gap
-        that restricts opportunities for financial security and
-        intergenerational prosperity.
+        Historical and ongoing systemic barriers—including redlining (where
+        lenders refused mortgages in predominantly Black neighborhoods),
+        discriminatory lending practices that offered worse loan terms to Black
+        buyers, and limited access to neighborhoods where home prices have
+        historically appreciated—have all worked together to undermine Black
+        families’ ability to build wealth through homeownership. Even when Black
+        households do manage to buy homes, these structural disadvantages often
+        mean their properties gain less value over time compared to homes in
+        predominantly white neighborhoods. This cycle helps keep a persistent
+        wealth gap in place, limiting not only day‑to‑day financial security but
+        also intergenerational prosperity.
       </p>
-    </ObservedArticleText>
+    </ArticleText>
 
-    <ObservedArticleText callback={() => {}} {options}>
-      <p in:fly={{ y: 20, duration: 600 }}>
+    <ArticleText>
+      <p>
         Addressing this disparity requires collective action to dismantle these
         systemic inequities. Policymakers, communities, and individuals must
         advocate for fair lending practices, invest in affordable housing in
         appreciating areas, and support initiatives that empower Black families
         to achieve sustainable homeownership.
       </p>
-    </ObservedArticleText>
+    </ArticleText>
 
-    <ObservedArticleText callback={() => {}} {options}>
-      <p in:fly={{ y: 20, duration: 600 }}>
+    <ArticleText>
+      <p>
         Explore datasets like those at <a href="https://blackwealthdata.org/"
           >blackwealthdata.org</a
         >, engage with local housing advocacy groups, or push for policy reforms
         to help close the gap and ensure homeownership becomes a true engine of
         wealth for all.
       </p>
-    </ObservedArticleText>
+    </ArticleText>
   {/snippet}
 </CenterScroller>
 

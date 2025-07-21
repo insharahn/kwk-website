@@ -49,8 +49,11 @@
   {#snippet scrolly()}
     <ObservedArticleText callback={showChartCallback} {options}>
       <p>
-        Counties with higher Black populations also tend to face higher social
-        vulnerability scores — and lower homeownership rates.
+        Counties with higher Black populations also tend to face <strong
+          >higher social vulnerability scores and lower homeownership rates.</strong
+        > The Social Vulnerability Index (SVI) is a measure that combines factors
+        like poverty, housing, disability, and minority status to estimate how vulnerable
+        a community might be during crises or disasters.
       </p>
     </ObservedArticleText>
 
@@ -65,9 +68,14 @@
 
     <ObservedArticleText callback={() => {}} {options}>
       <p>
-        <strong>Where you live shapes what you can own.</strong> Neighborhoods with
-        higher vulnerability often face greater barriers to home loans, lower investment,
-        and less opportunity to build equity that can be passed down.
+        Neighborhoods with higher vulnerability often face greater barriers to
+        home loans, lower investment, and less opportunity to build equity that
+        can be passed down.
+      </p>
+      <p>
+        Therefore, it is no exaggeration to say that <strong
+          >where you live shapes what you can own.</strong
+        >
       </p>
     </ObservedArticleText>
   {/snippet}

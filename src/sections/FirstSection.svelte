@@ -123,7 +123,9 @@
     </ObservedArticleText>
 
     <ObservedArticleText callback={showMediansCallback} {options}>
-      <p><strong>But not all families share this equally.</strong></p>
+      <p>
+        <strong>But not all families share opportunity this equally.</strong>
+      </p>
     </ObservedArticleText>
 
     <ObservedArticleText callback={showSliderCallback} {options}>
@@ -133,8 +135,8 @@
         Black homeownership rates lag behind national rates by significant
         margins. These lower home values and ownership rates limit wealth
         accumulation, restrict access to credit, and perpetuate inequality
-        across generations— reinforcing a cycle where systemic barriers keep
-        wealth out of reach.
+        across generations. All of these factors reinforce a cycle where <strong>systemic barriers keep
+        wealth out of reach</strong> and successive generations are unable to compound upon their families' wealth easily.
       </p>
     </ObservedArticleText>
   {/snippet}

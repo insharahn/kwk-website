@@ -59,7 +59,7 @@
         below the national average.
       </p>
       <p>
-        By 2023, Black homeownership remains lower, despite some gains over
+        By 2023, Black homeownership remains lower, despite greater gains over
         time.
       </p>
     </ObservedArticleText>
@@ -73,8 +73,9 @@
 
     <ObservedArticleText callback={highlight2023Callback} {options}>
       <p>
-        This means less opportunity to build equity, pass wealth to the next
-        generation, or weather economic downturns.
+        Not only does this mean less opportunity to build equity and pass wealth
+        to the next generation, but it becomes harder for Black families to
+        weather economic downturns.
       </p>
     </ObservedArticleText>
 
