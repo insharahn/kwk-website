@@ -16,7 +16,7 @@
 
 <style>
   .title-card {
-    background-color: #aa3377; /* Paul Tol's Bright Purple */
+    background-color: #aa3377; /* Paul Tol's Bright purple */
     height: 100vh;
     /*  width: 100vw; /*full viewport width*/
     margin: 0; /*remove any default margins*/
@@ -26,18 +26,11 @@
     text-align: center;
     padding: 2rem;
     box-sizing: border-box;
-    font-family:
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      Roboto,
-      Oxygen,
-      Ubuntu,
-      Cantarell,
-      sans-serif;
+    font-family: var(--font-sans);
+    font-style: italic;
     position: relative;
     overflow: hidden; /*prevent image overflow*/
+    border-bottom: 5px dotted #ccbb44;
   }
 
   .background-image {
@@ -59,17 +52,18 @@
       102,
       119,
       0.8
-    ); /* Paul Tol's Bright Pink with transparency */
+    ); /* Paul Tol's Bright pink with transparency */
     padding: 2rem;
-    border: 6px double #ccbb44; /* Paul Tol's Bright Yellow */
+    border: 6px dashed #ccbb44; /* Paul Tol's Bright yellow */
     border-radius: 2rem;
-    box-shadow: 16px 16px #4477aa; /* Paul Tol's Bright Blue for shadow */
+    /* box-shadow: 16px 16px #bbbbbb; /* Paul Tol's Bright gray */
     position: relative;
     z-index: 1; /*ensure content is above image*/
   }
 
   h1 {
     font-size: 3rem;
+    font-family: var(--font-altmono);
     margin: 0;
     color: #ccbb44; /* Paul Tol's Bright Yellow */
     text-shadow: 1px 1px 0 #1a1a1a;

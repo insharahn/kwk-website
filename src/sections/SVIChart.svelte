@@ -44,9 +44,13 @@
 
     options = {
       chart: { type: "scatter", zoomType: "xy" },
-      title: { text: "Black Homeownership vs SVI by County (2023)" },
+      title: {
+        text: "Black Homeownership vs SVI by County (2023)",
+        style: { fontFamily: "'Fira Mono', monospace" },
+      },
       subtitle: {
         text: "Each dot = one county; hover to see details; color indicates % Black Population",
+        style: { fontFamily: "'Fira Mono', monospace" },
       },
       accessibility: {
         enabled: true,
@@ -58,12 +62,18 @@
         },
       },
       xAxis: {
-        title: { text: "Social Vulnerability Index (SVI)" },
+        title: {
+          text: "Social Vulnerability Index (SVI)",
+          style: { fontFamily: "'Fira Mono', monospace" },
+        },
         min: 0,
         max: 1,
       },
       yAxis: {
-        title: { text: "% Black Owner-Occupied Homes" },
+        title: {
+          text: "% Black Owner-Occupied Homes",
+          style: { fontFamily: "'Fira Mono', monospace" },
+        },
         min: 0,
       },
       tooltip: {
@@ -73,7 +83,10 @@
       },
       legend: {
         enabled: true,
-        title: { text: "% Black Population" },
+        title: {
+          text: "% Black Population",
+          style: { fontFamily: "'Fira Mono', monospace" },
+        },
         layout: "vertical",
         align: "right",
         verticalAlign: "middle",
@@ -112,6 +125,7 @@
             point: {
               valueDescriptionFormat:
                 "{index}. {point.name}. SVI: {point.x:.2f}. % Black Homeownership: {point.y}%. % Black Population: {point.blackPct}%.",
+              style: { fontFamily: "'Fira Mono', monospace" },
             },
           },
         },
@@ -155,16 +169,7 @@
     margin: 2rem auto;
     max-width: 900px;
     text-align: center;
-    font-family:
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      Roboto,
-      Oxygen,
-      Ubuntu,
-      Cantarell,
-      sans-serif;
+    font-family: var(--font-mono);
   }
 
   figcaption {

@@ -37,17 +37,11 @@
     align-items: center;
     justify-content: flex-start;
     background-color: var(--offwhite); /* fallback */
+    color: #f7f5eb; /* off-white text for contrast */
+
     padding: min(100vh, 30rem) 1rem;
-    font-family:
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      Roboto,
-      Oxygen,
-      Ubuntu,
-      Cantarell,
-      sans-serif;
+    font-family: var(--font-sans);
+
     transition: background-color 0.3s ease;
     text-align: center;
   }

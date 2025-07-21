@@ -56,18 +56,9 @@
     background-color: #aa3377; /* Bright Purple */
     color: #f7f5eb; /* Off-white text */
     padding: 1rem 1.5rem;
-    font-family:
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      Roboto,
-      Oxygen,
-      Ubuntu,
-      Cantarell,
-      sans-serif;
-    font-size: 0.95rem;
-    border-top: 4px dotted #ccbb44; /* dotted top border */
+    font-family: var(--font-sans);
+    font-size: 0.99rem;
+    border-top: 5px dotted #ccbb44; /* dotted top border */
     bottom: 0;
     width: 100%;
     z-index: 10;
@@ -98,6 +89,8 @@
     content: " • ";
     color: #ccbb44; /* Bright Yellow separator */
     margin-left: 0.4rem;
+    font-size: 2.5rem;
+    vertical-align: middle;
   }
 
   .footer-links a {
@@ -115,10 +108,11 @@
     color: #f7f5eb;
     text-align: center;
     margin-top: 0.4rem;
+    font-family: var(--font-altmono);
   }
 
   .image-credits a {
-    color: #ccbb44;
+    color: #f7f5eb;
     text-decoration: underline;
   }
 

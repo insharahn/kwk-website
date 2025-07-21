@@ -141,6 +141,7 @@
 </Scroller>
 
 <style>
+
   .visual-side {
     display: flex;
     flex-direction: column;
@@ -159,6 +160,7 @@
     border: 3px dotted #ccbb44;
     border-radius: 1rem;
     padding: 1rem;
+    font-family: var(--font-mono);
   }
 
   dl {

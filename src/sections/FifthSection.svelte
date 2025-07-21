@@ -68,7 +68,7 @@
     margin: 1.2rem auto;
     font-size: 1.1rem;
     line-height: 1.5;
-    color: #333;
+    color: #f7f5eb;
     text-align: center;
   }
 
@@ -81,5 +81,13 @@
     border: 0;
     overflow: hidden;
     clip: rect(0 0 0 0);
+  }
+  a {
+    color: #ccbb44;
+    text-decoration: underline;
+  }
+
+  a:hover {
+    color: #4477aa;
   }
 </style>

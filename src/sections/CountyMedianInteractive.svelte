@@ -10,7 +10,9 @@
   let error = null;
 
   onMount(async () => {
-    const raw = await d3.csv(import.meta.env.BASE_URL + "data/black_median_home_value.csv");
+    const raw = await d3.csv(
+      import.meta.env.BASE_URL + "data/black_median_home_value.csv"
+    );
     data = raw
       .filter(
         (d) =>
@@ -134,16 +136,8 @@
     background-color: rgba(238, 102, 119, 0.8);
     border: 3px dotted #ccbb44;
     border-radius: 1rem;
-    font-family:
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      Roboto,
-      Oxygen,
-      Ubuntu,
-      Cantarell,
-      sans-serif;
+    font-family: var(--font-mono);
+
     font-size: 0.95rem;
     color: #f7f5eb;
     padding: 1.5rem;
@@ -174,6 +168,8 @@
     width: 80%;
     padding: 0.75rem;
     font-size: 0.95rem;
+    font-family: var(--font-mono);
+
     border: 2px solid #ccbb44;
     border-radius: 0.5rem;
     background: #fffaf2;
@@ -184,6 +180,7 @@
     outline: none;
     border-color: #4477aa;
     box-shadow: 0 0 0 3px rgba(68, 119, 170, 0.3);
+    font-family: var(--font-mono);
   }
 
   .buttons {
@@ -195,6 +192,8 @@
     padding: 0.6rem 1rem;
     font-size: 0.9rem;
     font-weight: 500;
+    font-family: var(--font-mono);
+
     color: #f7f5eb;
     background: #4477aa;
     border: none;

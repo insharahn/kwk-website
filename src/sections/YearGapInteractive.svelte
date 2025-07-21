@@ -119,16 +119,7 @@
     text-align: center;
     max-width: 400px;
     margin: 1rem auto;
-    font-family:
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      Roboto,
-      Oxygen,
-      Ubuntu,
-      Cantarell,
-      sans-serif;
+    font-family: var(--font-mono);
   }
 
   h3 {

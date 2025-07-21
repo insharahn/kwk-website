@@ -25,7 +25,8 @@
     console.log("Loaded national rate data:", nationalRaw); //for debugging
 
     const blackRaw = await d3.csv(
-      import.meta.env.BASE_URL + "data/black_homeownership_16_to_23_caseshiller.csv"
+      import.meta.env.BASE_URL +
+        "data/black_homeownership_16_to_23_caseshiller.csv"
     );
     console.log("Loaded black rate data:", blackRaw); //for debugging
 
@@ -58,8 +59,15 @@
     //plot!
     options = {
       chart: { type: "spline" },
-      title: { text: "Black vs. National Homeownership Rate (2016–2023)" },
-      subtitle: { text: "Click legend items to hide/show series" },
+      title: {
+        text: "Black vs. National Homeownership Rate (2016–2023)",
+        style: { fontFamily: "'Fira Mono', monospace" },
+      },
+      subtitle: {
+        text: "Click legend items to hide/show series",
+        style: { fontFamily: "'Fira Mono', monospace" },
+      },
+      style: { fontFamily: "'Jost', sans-serif" },
       accessibility: {
         //add accessibility
         description:
@@ -72,10 +80,16 @@
       },
       xAxis: {
         type: "datetime",
-        title: { text: "Year" },
+        title: {
+          text: "Year",
+          style: { fontFamily: "'Fira Mono', monospace" },
+        },
       },
       yAxis: {
-        title: { text: "Homeownership Rate (%)" },
+        title: {
+          text: "Homeownership Rate (%)",
+          style: { fontFamily: "'Fira Mono', monospace" },
+        },
         max: 70,
         min: 35,
       },
@@ -97,12 +111,12 @@
         {
           name: "National Average",
           data: nationalSeries,
-          color: "#1f77b4", //blue
+          color: "#4477aa", //blue
         },
         {
           name: "Black Homeownership",
           data: blackSeries,
-          color: "#d62728", //red
+          color: "#aa3377", //purple
         },
       ],
       credits: { enabled: false },
@@ -143,16 +157,7 @@
     margin: 2rem auto;
     max-width: 900px;
     text-align: center;
-    font-family:
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      Roboto,
-      Oxygen,
-      Ubuntu,
-      Cantarell,
-      sans-serif;
+    font-family: var(--font-mono);
   }
 
   figcaption {

@@ -37,22 +37,13 @@
       102,
       119,
       0.85
-    ); /* Bright Pink with slight transparency */
-    color: #f7f5eb; /* Off-white text for contrast */
-    border: 3px dashed #ccbb44; /* Bright Yellow border */
+    ); /* bright pink with slight transparency */
+    color: #f7f5eb; /* off-white text for contrast */
+    border: 3px dashed #ccbb44; /* brihg yellow border */
     border-radius: 20px;
     padding: 1.5rem;
-    box-shadow: 12px 12px #4477aa; /* Bright Blue shadow */
-    font-family:
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      Roboto,
-      Oxygen,
-      Ubuntu,
-      Cantarell,
-      sans-serif;
+    box-shadow: 12px 12px #bbbbbb; /* gray shadow */
+    font-family: var(--font-sans);
     text-align: center;
   }
 
