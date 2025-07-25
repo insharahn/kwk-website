@@ -1,7 +1,10 @@
 # Generational Gains: A Scrollytelling Project on Black Homeownership & Wealth
 
 This project is part of the Kode With Klossy Data Storytelling Challenge.  
-I used <a href="https://github.com/jasminesamra/kwk-scrollytelling-template">this template to design it!</a>
+
+I ended up winning the category **Frontend Firepower**, which "...Goes to the project that shows frontend finesse, especially through smart, elegant use of JavaScript and Svelte."
+
+I used <a href="https://github.com/jasminesamra/kwk-scrollytelling-template">this template to help kickstart the design!</a>
 
 ## Deployed Link
 Check the project out <a href="https://insharahn.github.io/kwk-website/">here!</a>
@@ -12,7 +15,7 @@ For optimal viewing experience, please set your browser's zoom to 80% and only v
 
 This project was built to be inclusive and usable for as many people as possible. It includes:
 
-- Semantic HTML structure and hidden screen reader headings (`aria-labelledby`)
+- Semantic HTML structure and hidden screen reader headings
 - Descriptive ARIA labels for dynamic content and charts
 - Color palette chosen to be colorblind-friendly (based on Paul Tol’s Bright palette!)
 - Figcaptions, detailed axis labels, and data source notes for all charts
